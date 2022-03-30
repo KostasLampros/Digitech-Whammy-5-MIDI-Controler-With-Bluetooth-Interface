@@ -56,9 +56,8 @@ int i = -1;
 int j = 1;
 int k;
 int q = -1;
-int w = 1; // mporei n bgei
 bool once = true;
-//int f = 0;
+
 
 
 void parse_msg(char msg[]){
@@ -71,7 +70,7 @@ void parse_msg(char msg[]){
     for (int x=0; x < strlen(msg); x++) Serial.print(msg[x]);
     ptr = strtok(msg, ","); //pointers of message ints
     char *strings[25];
-    //Serial.print("ptr = " + String(ptr));
+
   while (ptr != NULL)
    {  
       strings[index] = ptr;  
@@ -95,8 +94,6 @@ void parse_msg(char msg[]){
         prefs.end();
         lastModeState = !lastModeState;
       }
-      //int prog[clLen];
-      //prefs.getBytes("classic", prog, maxVal);
    }else{
      SerialBT.println("Too long array");
      delay(1000);
@@ -137,20 +134,6 @@ void changeProg() {
   }
 }
 
-
-
-
-// void blink_led(int led){
-//     if(digitalRead(switch_) == HIGH){
-//         if(millis()-blinkTimer <250){
-//             digitalWrite(led,HIGH);
-//         }else if(millis()-blinkTimer<500){
-//             digitalWrite(led,LOW); 
-//         }else{
-//           blinkTimer = millis();
-//         }
-//     }    
-// }
 
 // Function to send programms via bluetooth for communication with the app
 void send(int length){
@@ -212,7 +195,6 @@ void loop(){
   if(digitalRead(switch_) == LOW){
         if (i==-1){
           q = -1;
-          w = 1;
           SerialBT.println("BT stopping");//
           SerialBT.flush();               // Disconect from bluetooth to save power
           SerialBT.disconnect();          //
@@ -270,7 +252,6 @@ void loop(){
           j = 1;
           digitalWrite(led_norm,LOW); // In case blink() ended with HIGH value
           if( rev == true){
-            w = 21;
           }
         }
 
