@@ -12,3 +12,6 @@ If everything executes correctly an appropriate prompt will appear.
 
 ## Playing
 While not in pairing, the mode switch controls what array you are going to loop classic or chords. When in normal sequence, the led_norm will be on and the order will be ascending (or clockwise on the pedal) when the foot button is pressed. If the foot button is pressed for 0.5 sec it will go in reverse mode and the led_rev will light on. The array will be descending (or counterclockwise on the pedal).
+
+## App
+To get the app download the .apk file and install it. To modify the app, download the .aia file and import it to MIT App Inventor.
