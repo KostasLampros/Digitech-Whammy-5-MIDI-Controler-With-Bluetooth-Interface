@@ -120,10 +120,12 @@ void changeProg() {
             if(!rev){  // check if it is in reverse mode or not
               j = clLen -1;  //Modification of i progression to reverse 
               rev = true;
+              digitalWrite(led_norm, LOW); // turn off nomal led
               digitalWrite(led_rev, HIGH); // turn on reversed led
             }else{
               j = 1;
               rev = false;
+              digitalWrite(led_norm, HIGH); // turn on nomal led
               digitalWrite(led_rev, LOW); // turn off reversed led
             }
         }
@@ -217,7 +219,8 @@ void loop(){
           SerialBT.end();                 //      
           once = true;
           connected = 0;
-          digitalWrite(led_norm,LOW); //In case blink() ended with HIGH value
+          digitalWrite(led_norm, !rev); // turn on nomal led
+          digitalWrite(led_rev, rev); // turn off reversed led
           if( rev == true){
             j = clLen-1;
           }
@@ -276,8 +279,10 @@ void loop(){
           SerialBT.begin("ESP32"); // Bluetooth device name
           while(!connected){
             digitalWrite(led_rev, HIGH);
+            digitalWrite(led_norm, HIGH);
             delay(250);
             digitalWrite(led_rev, LOW);
+            digitalWrite(led_norm, LOW);
             delay(250);
             if(SerialBT.read() == 1) connected = 1;
             if(digitalRead(switch_) == LOW) break;
