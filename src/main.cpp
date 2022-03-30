@@ -28,10 +28,10 @@ char *ptr = NULL;
 byte prog[maxVal]; // Array to print programms used
 #define tap_delay  200 // Delay before next change registration
 #define duration  500 // Duration needed to change rotation
-#define buttonPin  13 //Stomp switch pin
+#define buttonPin  2 //Stomp switch pin
 #define switch_  15 //Switch to change modes: playng/updating
-#define led_norm  4 // Led for normal looping mode
-#define led_rev  2 // Led for reversed looping mode
+#define led_norm  12 // Led for normal looping mode
+#define led_rev  13 // Led for reversed looping mode
 #define mode_switch 14 //Swith to change mode form Chords to Classic
 
 //Static variables
