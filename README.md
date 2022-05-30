@@ -12,4 +12,6 @@ By turning the switch in the saving mode position you can navigate through the p
 When the switch is in playing mode you scroll through the saved programs by pressing the stomp switch. Reverse mode is also available.
 
 ##Schematic 
-![Example schematic](Images/Schematic.png)
+
+
+<img src="Images/Schematic.png" width=50% height=50%>)
