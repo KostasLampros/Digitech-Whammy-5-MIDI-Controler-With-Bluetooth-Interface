@@ -7,6 +7,9 @@ With this implementation you can select the programs you want and loop only amon
 
 By turning the switch in the saving mode position you can navigate through the programs and press the save button to add or remove a program. The led_norm led will indicate if the program is already saved in memory.
 
+<img src="Images/classic.png" width=20% height=20%>)
+<img src="Images/chords.png" width=20% height=20%>)
+
 ## Playing
 
 When the switch is in playing mode you scroll through the saved programs by pressing the stomp switch. Reverse mode is also available.
