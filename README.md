@@ -1,4 +1,5 @@
 # Digitech Whammy 5 MIDI Controller With Bluetooth Interface
+**_NOTE:_**  The code is not finilized. It working but has known flaws that will be worked on on future iterations.
 
 This is a MIDI controller for the Digitech Whammy 5/ Bass with an ESR32-Cam and an accompanying app made with MIT app inventor
 The ESP32-Cam was selected for its compactness and connection capabilities.
